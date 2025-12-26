@@ -1,0 +1,8 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+.btn-action{
+  @apply bg-linear-to-r from-[#632EE3] to-[#9F62F2] text-white
+}
+
+/* bg-linear-to-r from [#632EE3] to [#9F62F2] */
