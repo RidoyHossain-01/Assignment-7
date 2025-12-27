@@ -14,9 +14,7 @@ const Footer = () => {
                 CS — Ticket System
               </h2>
               <p className="text-sm leading-relaxed">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s.
+                We are dedicated to support our customers 24/7 . Whatever problem you face, please contact us, we're always here for you...
               </p>
             </div>
 

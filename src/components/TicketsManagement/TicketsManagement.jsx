@@ -2,6 +2,7 @@ import { use,  useState } from "react";
 import CountBox from "../CountBox/CountBox";
 import Card from "../Card/Card";
 import ProgressCard from "../Card/ProgressCard";
+import Container from "../Container/Container";
 
 const TicketsManagement = ({ fetchPromise }) => {
   const fetchData = use(fetchPromise);
@@ -14,7 +15,8 @@ const TicketsManagement = ({ fetchPromise }) => {
   
 
   return (
-    <div>
+    <Container>
+      <div>
       <CountBox data={data} />
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-5">
@@ -78,6 +80,8 @@ const TicketsManagement = ({ fetchPromise }) => {
 
       
     </div>
+    </Container>
+    
   );
 };
 
