@@ -15,12 +15,9 @@ function App() {
   return (
     <div className="px-2 md:px-5">
       <Navbar />
-      <Suspense fallback={'loading'}>
+      <Suspense fallback={"loading"}>
         <TicketsManagement fetchPromise={fetchPromise} />
       </Suspense>
-
-
-
 
       <Footer />
       <ToastContainer />
@@ -29,5 +26,3 @@ function App() {
 }
 
 export default App;
-
-

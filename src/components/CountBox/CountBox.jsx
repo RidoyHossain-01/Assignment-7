@@ -1,14 +1,11 @@
 import Container from "../Container/Container";
 
-const CountBox = ({data}) => {
-
-  
-  
-  const inProgress = data.filter(element=>element.status=='In-Progress')
-  const resolved = data.filter(element=>element.status==="Resolved")
+const CountBox = ({ data }) => {
+  const inProgress = data.filter((element) => element.status == "In-Progress");
+  const resolved = data.filter((element) => element.status === "Resolved");
 
   // console.log(resolved);
-  
+
   return (
     <Container>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-20">

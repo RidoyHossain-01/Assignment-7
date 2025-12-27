@@ -1,24 +1,22 @@
 import { toast } from "react-toastify";
 
-const Card = ({ issue,data,setData }) => {
-     const handleClick =()=>{
-          const currentData = data.find( elm=>elm.ticketId===issue.ticketId)
-           if (currentData.status=="Pending") {
-               currentData.status="In-Progress"
-               toast.success("In-Progress")
-               const resData = data.filter(elm=>elm.ticketId!=issue.ticketId)
-               setData([currentData,...resData])
-          }
-         
-          // console.log(expectedData.ticketId);
-          
-         
-          
-          
-          
-     }
+const Card = ({ issue, data, setData }) => {
+  const handleClick = () => {
+    const currentData = data.find((elm) => elm.ticketId === issue.ticketId);
+    if (currentData.status == "Pending") {
+      currentData.status = "In-Progress";
+      toast.success("In-Progress");
+      const resData = data.filter((elm) => elm.ticketId != issue.ticketId);
+      setData([currentData, ...resData]);
+    }
+
+    // console.log(expectedData.ticketId);
+  };
   return (
-    <div onClick={handleClick} className="bg-white rounded-lg border border-gray-200 p-4 shadow-sm space-y-3 w-full">
+    <div
+      onClick={handleClick}
+      className="bg-white rounded-lg border border-gray-200 p-4 shadow-sm space-y-3 w-full"
+    >
       {/* Header */}
       <div className="flex items-start justify-between gap-3">
         <h2 className="font-semibold text-gray-900 text-sm md:text-base">

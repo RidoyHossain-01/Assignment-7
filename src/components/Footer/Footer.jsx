@@ -14,7 +14,9 @@ const Footer = () => {
                 CS — Ticket System
               </h2>
               <p className="text-sm leading-relaxed">
-                We are dedicated to support our customers 24/7 . Whatever problem you face, please contact us, we're always here for you...
+                We are dedicated to support our customers 24/7 . Whatever
+                problem you face, please contact us, we're always here for
+                you...
               </p>
             </div>
 
