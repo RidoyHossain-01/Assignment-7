@@ -2,6 +2,7 @@ import { Suspense } from "react";
 import Footer from "./components/Footer/Footer";
 import Navbar from "./components/Navbar/Navbar";
 import TicketsManagement from "./components/TicketsManagement/TicketsManagement";
+import { ToastContainer } from "react-toastify";
 
 const fetchIssues = async () => {
   const result = await fetch("/data.json");
@@ -18,7 +19,11 @@ function App() {
         <TicketsManagement fetchPromise={fetchPromise} />
       </Suspense>
 
+
+
+
       <Footer />
+      <ToastContainer />
     </div>
   );
 }
