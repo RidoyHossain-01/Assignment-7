@@ -6,13 +6,11 @@ import Container from "../Container/Container";
 
 const TicketsManagement = ({ fetchPromise }) => {
   const fetchData = use(fetchPromise);
-  // console.log(fetchData);
+ 
 
   const [data, setData] = useState(fetchData);
 
-  const resolvedData = data.filter((element) => element.status == "Resolved");
-  console.log(resolvedData);
-
+ 
   return (
     <Container>
       <div>
@@ -51,7 +49,7 @@ const TicketsManagement = ({ fetchPromise }) => {
               {data.map((element) => {
                 if (element.status == "In-Progress") {
                   return (
-                    <ProgressCard
+                    <ProgressCard key={element.ticketId}
                       element={element}
                       data={data}
                       setData={setData}
@@ -65,7 +63,7 @@ const TicketsManagement = ({ fetchPromise }) => {
               {data.map((element) => {
                 if (element.status == "Resolved") {
                   return (
-                    <div className="flex flex-col mb-1.5 shadow-xl  p-3  bg-green-100 text-center">
+                    <div key={element.ticketId} className="flex flex-col mb-1.5 shadow-xl  p-3  bg-green-100 text-center">
                       <h1 className="text-xl font-semibold ">
                         {element.subject}
                       </h1>

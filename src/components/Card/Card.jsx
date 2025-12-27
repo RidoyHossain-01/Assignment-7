@@ -10,7 +10,7 @@ const Card = ({ issue, data, setData }) => {
       setData([currentData, ...resData]);
     }
 
-    // console.log(expectedData.ticketId);
+    
   };
   return (
     <div

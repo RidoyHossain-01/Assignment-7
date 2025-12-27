@@ -4,7 +4,7 @@ const CountBox = ({ data }) => {
   const inProgress = data.filter((element) => element.status == "In-Progress");
   const resolved = data.filter((element) => element.status === "Resolved");
 
-  // console.log(resolved);
+  
 
   return (
     <Container>
